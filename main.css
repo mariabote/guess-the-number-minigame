@@ -2,11 +2,19 @@ html {
   height: 100%;
 }
 body {
-  background-color: #e2d1bf;
+  background: linear-gradient(120deg, #e2d1bf, #d08e7e);
   display: flex;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100%;
+  user-select: none;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
 }
 .content {
   display: flex;
@@ -16,20 +24,35 @@ body {
   justify-content: center;
   font-family: "Afacad", sans-serif;
   color: #d08e7e;
-  height: 100%;
+  max-width: 320px;
+  max-height: 500px;
+  background-color: #ffffffbb;
+  border: 1px solid #ffffff55;
+  border-radius: 3rem;
+  padding: 3rem;
+  box-shadow: 0px 0px 15px 15px#ffffff10;
 }
 
 .button {
   color: white;
   background-color: #987861;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+.button:hover {
+  background-color: #e2d1bf;
+  color: #987861;
+}
+
 .text {
   background-color: #ffffffbb;
+  color: #987861;
+  text-align: center;
+  font-size: 1rem;
 }
 .input {
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px;
-  width: 60%;
+  width: 80%;
   margin: 10px;
 }
