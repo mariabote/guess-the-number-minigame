@@ -1,0 +1,17 @@
+body {
+  background-color: #e2d1bf;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+  padding: 5%;
+  font-family: "Afacad", sans-serif;
+  color: #d08e7e;
+}
+.button {
+  color: white;
+  background-color: #987861;
+  border: 0;
+  border-radius: 5px;
+}
