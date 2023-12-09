@@ -1,17 +1,35 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #e2d1bf;
   display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+.content {
+  display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
+  align-items: center;
   justify-content: center;
-  padding: 5%;
   font-family: "Afacad", sans-serif;
   color: #d08e7e;
+  height: 100%;
 }
+
 .button {
   color: white;
   background-color: #987861;
+}
+.text {
+  background-color: #ffffffbb;
+}
+.input {
   border: 0;
   border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  margin: 10px;
 }
