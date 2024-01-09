@@ -22,6 +22,11 @@ function giveClue(clue) {
     clueElement.innerHTML=clue;
 
 }
+function increaseTries() {
+    triesNumber = triesNumber + 1;
+    triesElement.innerHTML=`Número de intentos ${triesNumber}.`;
+    
+}
 // EVENTOS
 
 buttonElement.addEventListener("click", (event)=>{
@@ -35,8 +40,7 @@ buttonElement.addEventListener("click", (event)=>{
     } else if ( value === randomNumber ){
         giveClue("Has ganado campeona!!!");
     } 
-    triesNumber = triesNumber + 1;
-    triesElement.innerHTML = `Número de intentos ${triesNumber}.`;
+    increaseTries();
 });
 
 // CÓDIGO CUANDO CARGA LA PÁGINA.
