@@ -18,19 +18,22 @@ function getRandomNumber(max) {
 }
    
 // FUNCIONES
+function giveClue(clue) {
+    clueElement.innerHTML=clue;
 
+}
 // EVENTOS
 
 buttonElement.addEventListener("click", (event)=>{
-    let value = inputElement.value;
+    let value = parseInt (inputElement.value);
     if ( value < 1 || value > 100 ){
-        clueElement.innerHTML = "El número debe estar entre 1 y 100";
+        giveClue("El número debe estar entre 1 y 100") ;
     } else if ( value > randomNumber ) {
-        clueElement.innerHTML = "Demasiado alto.";        
+        giveClue("Demasiado alto.");        
     } else if ( value < randomNumber ){
-        clueElement.innerHTML = "Demasiado bajo.";  
-    } else if ( value == randomNumber ){
-        clueElement.innerHTML = "Has ganado campeona!!!";
+        giveClue("Demasiado bajo.");  
+    } else if ( value === randomNumber ){
+        giveClue("Has ganado campeona!!!");
     } 
     triesNumber = triesNumber + 1;
     triesElement.innerHTML = `Número de intentos ${triesNumber}.`;
