@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluación intermedia 2</title>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/bg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -13,14 +14,22 @@
 </head>
 
 <body>
-    <form class="content" action="">
-        <h1>Adivina el número</h1>
-        <h2>Introduce aquí tu número</h2>
-        <input type="number" class="input text js_input" placeholder="Introduce aquí tu número">
-        <input type="button" value="Prueba" class="input button js_button">
-        <p class="clue js_pista">Pista: Escribe el número y dale a Prueba</p>
-        <p class="tries js_intentos">Número de intentos 0</p>
-    </form>
+    <div class="wrapper">
+        <div class="hero"></div>
+        <div class="content card bordered">
+            <header>
+                <h1>Guess the number</h1>
+            </header>
+            <form action="">
+                <input type="number" class="input text bordered js_input" placeholder="Write the number">
+                <input type="button" value="Guess" class="input button js_button">
+            </form>
+            <footer>
+                <p class="clue js_pista">Clue: Write a number and press Guess</p>
+                <p class="tries js_intentos">0 attempts</p>
+            </footer>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

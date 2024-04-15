@@ -24,7 +24,7 @@ function giveClue(clue) {
 }
 function increaseTries() {
     triesNumber = triesNumber + 1;
-    triesElement.innerHTML=`Número de intentos ${triesNumber}.`;
+    triesElement.innerHTML=`${triesNumber} attempts`;
     
 }
 // EVENTOS
@@ -32,13 +32,13 @@ function increaseTries() {
 buttonElement.addEventListener("click", (event)=>{
     let value = parseInt (inputElement.value);
     if ( value < 1 || value > 100 ){
-        giveClue("El número debe estar entre 1 y 100") ;
+        giveClue("Between 1 and 100") ;
     } else if ( value > randomNumber ) {
-        giveClue("Demasiado alto.");        
+        giveClue("Too high");        
     } else if ( value < randomNumber ){
-        giveClue("Demasiado bajo.");  
+        giveClue("Too low");  
     } else if ( value === randomNumber ){
-        giveClue("Has ganado campeona!!!");
+        giveClue("You won!");
     } 
     increaseTries();
 });
@@ -46,4 +46,4 @@ buttonElement.addEventListener("click", (event)=>{
 // CÓDIGO CUANDO CARGA LA PÁGINA.
 
 randomNumber=getRandomNumber(100);
-console.log(`El valor es ${randomNumber}.`);
+console.log(`Number is ${randomNumber}. Cheater! ;)`);
